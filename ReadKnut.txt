@@ -1,0 +1,27 @@
+NB! App.Config parametere må tilpasses i alle applikasjoner, spesielt viktig er database connectionstring og filsti til Excel filen.
+---
+
+SQL SERVER
+----------
+Løsningen baserer seg på 3 tabeller, se DataCenter project.
+	- Bank tabellen inneholder rader som "sendes" til bank
+	- Forsikring tabellen er en kopi av Excel filen som blir lest inn av console applikasjonen SendRecordsToBank
+	- MessageQueue tabellen brukes som en kø(kø mekanisme)
+	
+C# APPLIKASJONER
+----------------
+Løsningen består av 2 console applikasjoner og 1 windows forms applikasjon.
+
+1) Kjør SendRecordsToBank 1 gang, den leser excel filen inn i Forsikring tabellen og sender data til 
+banken(dvs til Bank tabellen) basert på "filter" parametere i App.Config filen.
+2) Start BankConsentApplication; her kan man bla seg gjennom rader i Bank tabellen og endre samtykke info. 
+Trykk på lagre knappen og Bank tabellen oppdateres og det skrives rad(er) til MessageQueue tabellen.
+3) Kjør ReadMQ(Tanken er at denne scheduleres i Task Scheduler), applikasjonen leser alle rader i MessageQueue og oppdaterer Forsikring tabellen.
+Når Forsikring tabellen er oppdatert slettes radene i MessageQueue tabellen basert på unik ID(dvs er det kommet nye rader i MessageQueue vil disse ikke slettes).
+ReadMQ inneholder også en integrasjonstest(styres med Y/N i App.Config) som sammenligner rader i Bank og Forsikring tabellen, disse skal være like etter at ReadMQ er kjørt.
+
+
+SendRecordsToBank og ReadMQ inneholder "automated" unit tester.
+
+
+
