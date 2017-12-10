@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendRecordsToBank", "SendRecordsToBank\SendRecordsToBank.csproj", "{B128FDE8-CEEB-4CE3-9B60-A9050217B9BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendRecordsToBankTest", "SendRecordsToBankTest\SendRecordsToBankTest.csproj", "{2CBEC3C8-A1FA-4D34-B516-F1DEF971ADDD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B128FDE8-CEEB-4CE3-9B60-A9050217B9BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B128FDE8-CEEB-4CE3-9B60-A9050217B9BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B128FDE8-CEEB-4CE3-9B60-A9050217B9BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B128FDE8-CEEB-4CE3-9B60-A9050217B9BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CBEC3C8-A1FA-4D34-B516-F1DEF971ADDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CBEC3C8-A1FA-4D34-B516-F1DEF971ADDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CBEC3C8-A1FA-4D34-B516-F1DEF971ADDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CBEC3C8-A1FA-4D34-B516-F1DEF971ADDD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
